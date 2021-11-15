@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<input class="click" type="text"/>
+	<input class="focus" type="text"/>
+	<input class="value" type="text"/>
+
+
+
+
+
+
+    <script>
+       
+       function funcionalidad () {
+            console.log(document.querySelector("button"));
+           document.querySelector("input").focus()
+           console.log(document.querySelector("input"));
+       }
+
+        function crearBoton() {
+            let boton = document.createElement("button");
+            boton.id = "btnToClick";
+            document.body.appendChild(boton);
+            document.getElementById("btnToClick").onclick = funcionalidad
+        }
+
+        crearBoton();
+
+        function mostrar () {
+        console.log(document.querySelector("input"))
+        }
+
+
+
+        function darInfo () {
+            document.querySelector("input").oninput = mostrar;
+        }
+
+        darInfo ();
+
+
+
+    </script>
+
+
+
+</body>
+</html>
